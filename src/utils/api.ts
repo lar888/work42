@@ -5,7 +5,7 @@ const API_URL = 'https://jsonplaceholder.typicode.com/users'
 
 export const fetchData = async (): Promise<UserInterface[]> => {
   try {
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    await new Promise((resolve) => setTimeout(resolve, 1000))
     const response = await axios.get(API_URL)
     return response.data
   } catch (error: unknown) {
@@ -18,7 +18,7 @@ export const fetchData = async (): Promise<UserInterface[]> => {
 
 export const fetchUserById = async (id: number): Promise<UserInterface> => {
   try {
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    await new Promise((resolve) => setTimeout(resolve, 1000))
     const response = await axios.get(`${API_URL}/${id}`)
     return response.data
   } catch (error: unknown) {
